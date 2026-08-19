@@ -1,0 +1,62 @@
+name: Bug Report
+description: Report a bug in HubSpot Demo Forge
+labels: [bug]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Demo Forge version
+      description: Output of `pip show hubspot-demo-forge` or git commit hash
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      description: Output of `python --version`
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Command run
+      description: The full command you ran (redact any tokens)
+      placeholder: "python -m forge seed profiles/full_portal.json --dry-run"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened. Include error messages if applicable.
+    validations:
+      required: true
+  - type: dropdown
+    id: preset
+    attributes:
+      label: Preset
+      options:
+        - default
+        - canon
+        - N/A
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Run mode
+      options:
+        - --dry-run
+        - Live (actual HubSpot calls)
+        - N/A
+  - type: textarea
+    id: output
+    attributes:
+      label: Sanitized output
+      description: Paste relevant output (remove any tokens or sensitive data)
+      render: shell

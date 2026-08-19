@@ -1,0 +1,34 @@
+[project]
+name = "hubspot-demo-forge"
+version = "0.1.0"
+description = "Generate and seed realistic HubSpot demo environments from reusable profile definitions"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+    { name = "Scott Collier" },
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/scottcollier10/hubspot-demo-forge"
+Issues = "https://github.com/scottcollier10/hubspot-demo-forge/issues"
+Documentation = "https://github.com/scottcollier10/hubspot-demo-forge/blob/main/docs/profiles.md"
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=6.0"]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools.packages.find]
+include = ["forge*"]
+
+[project.scripts]
+forge = "forge.cli:main"

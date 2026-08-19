@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+*.egg-info/
+dist/
+.venv/
+.pytest_cache/
+.forge-cache/
+.worktrees/
+.DS_Store

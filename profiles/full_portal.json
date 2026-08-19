@@ -1,0 +1,39 @@
+{
+  "company": {
+    "name": "Northstar SaaS",
+    "industry": "B2B SaaS",
+    "size": "mid-market",
+    "icp": "Revenue and operations leaders scaling from SMB to enterprise"
+  },
+  "counts": {
+    "companies": 20,
+    "contacts_per_company": [3, 10],
+    "deals": 40,
+    "tickets": 25,
+    "products": 8,
+    "activities_per_contact": [3, 8]
+  },
+  "pipeline": {
+    "id": "default",
+    "stages": {
+      "warm": { "id": "qualifiedtobuy", "weight": 0.4 },
+      "at_risk": { "id": "contractsent", "weight": 0.4 },
+      "dormant": { "id": "presentationscheduled", "weight": 0.2 }
+    },
+    "close_date_offsets": { "warm": 30, "at_risk": -5, "dormant": -45 },
+    "temp_stage": "appointmentscheduled"
+  },
+  "tickets": {
+    "pipeline": "0",
+    "statuses": { "open": 0.4, "waiting": 0.3, "closed": 0.3 }
+  },
+  "products": {
+    "price_range": [5000, 75000],
+    "line_items_per_deal": [1, 3]
+  },
+  "activities": {
+    "types": ["call", "email", "meeting", "note"],
+    "recency_days": 90
+  },
+  "properties": { "preset": "default", "sets": ["fit", "engagement"] }
+}

@@ -1,0 +1,24 @@
+{
+  "company": {
+    "name": "Demo Corp",
+    "industry": "B2B SaaS",
+    "size": "mid-market",
+    "icp": "Marketing and sales leaders at mid-market B2B companies"
+  },
+  "counts": {
+    "companies": 6,
+    "contacts_per_company": [8, 15],
+    "deals": 25
+  },
+  "pipeline": {
+    "id": "default",
+    "stages": {
+      "warm": { "id": "qualifiedtobuy", "weight": 0.4 },
+      "at_risk": { "id": "contractsent", "weight": 0.4 },
+      "dormant": { "id": "presentationscheduled", "weight": 0.2 }
+    },
+    "close_date_offsets": { "warm": 30, "at_risk": -5, "dormant": -45 },
+    "temp_stage": "appointmentscheduled"
+  },
+  "properties": { "preset": "canon", "sets": ["fit", "engagement"] }
+}
